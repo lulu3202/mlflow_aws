@@ -30,6 +30,13 @@ This project setup helps with logging and tracking machine learning experiments,
 4. Create a s3 bucket
 5. Create EC2 machine (Ubuntu) & add Security groups 5000 port
 
+   ### Outputs 
+#### Mlflow running in remote EC2 instance 
+![alt text](image.png)
+
+#### Model artifacts stored in S3 bucket 
+![alt text](image-1.png)
+
 Run the following command on EC2 machine
 ```bash
 sudo apt update
@@ -66,10 +73,5 @@ mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflowtracking11
 export MLFLOW_TRACKING_URI=http://ec2-54-219-183-183.us-west-1.compute.amazonaws.com:5000/
 
 
-### Outputs 
-#### Mlflow running in remote EC2 instance 
-![alt text](image.png)
 
-#### Model artifacts stored in S3 bucket 
-![alt text](image-1.png)
 
